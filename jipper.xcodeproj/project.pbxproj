@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CFA9A8C729D480D100C170D0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9A8C629D480D100C170D0 /* main.swift */; };
+		CFA9A8CF29D4814500C170D0 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = CFA9A8CE29D4814500C170D0 /* ArgumentParser */; };
+		CFA9A8DA29D5412800C170D0 /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = CFA9A8D929D5412800C170D0 /* ZipArchive */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFA9A8CF29D4814500C170D0 /* ArgumentParser in Frameworks */,
+				CFA9A8DA29D5412800C170D0 /* ZipArchive in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +82,10 @@
 			dependencies = (
 			);
 			name = jipper;
+			packageProductDependencies = (
+				CFA9A8CE29D4814500C170D0 /* ArgumentParser */,
+				CFA9A8D929D5412800C170D0 /* ZipArchive */,
+			);
 			productName = jipper;
 			productReference = CFA9A8C329D480D100C170D0 /* jipper */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +114,10 @@
 				Base,
 			);
 			mainGroup = CFA9A8BA29D480D100C170D0;
+			packageReferences = (
+				CFA9A8CD29D4814500C170D0 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				CFA9A8D829D5412800C170D0 /* XCRemoteSwiftPackageReference "ZipArchive" */,
+			);
 			productRefGroup = CFA9A8C429D480D100C170D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,6 +256,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = 2X98FX3N65;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -255,6 +268,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = 2X98FX3N65;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -284,6 +298,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CFA9A8CD29D4814500C170D0 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		CFA9A8D829D5412800C170D0 /* XCRemoteSwiftPackageReference "ZipArchive" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ZipArchive/ZipArchive";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CFA9A8CE29D4814500C170D0 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CFA9A8CD29D4814500C170D0 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		CFA9A8D929D5412800C170D0 /* ZipArchive */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CFA9A8D829D5412800C170D0 /* XCRemoteSwiftPackageReference "ZipArchive" */;
+			productName = ZipArchive;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFA9A8BB29D480D100C170D0 /* Project object */;
 }
